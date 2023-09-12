@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "164220562382",
+    "project_id": "ventilatormonitoring-ae03f",
+    "storage_bucket": "ventilatormonitoring-ae03f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:164220562382:android:b8e308c4c9e881ffd1999f",
+        "android_client_info": {
+          "package_name": "com.example.ventilatormonitoring"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "164220562382-3undms24v8d9uc2m25plq4rc30v504ga.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7g1hibWSLgkA08Na5uhiP8hwlW3AliRs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "164220562382-3undms24v8d9uc2m25plq4rc30v504ga.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
