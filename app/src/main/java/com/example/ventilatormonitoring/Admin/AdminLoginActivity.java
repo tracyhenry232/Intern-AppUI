@@ -88,7 +88,7 @@ public class AdminLoginActivity extends AppCompatActivity {
     private void performLogin() {
         String email = et_email.getText().toString();
         String password = et_password.getText().toString();
-        String userName = et_username.getText().toString();
+
 
         if (email.isEmpty()) {
             et_email.setError("Please Enter Email");
@@ -113,7 +113,7 @@ public class AdminLoginActivity extends AppCompatActivity {
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()) {
                         progressDialog.dismiss();
-                        sendUserToMainActivity(userName);
+                        sendUserToMainActivity(email);
                         Toast.makeText(AdminLoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
                     } else {
                         progressDialog.dismiss();
@@ -124,9 +124,9 @@ public class AdminLoginActivity extends AppCompatActivity {
         }
     }
 
-    private void sendUserToMainActivity(String userName) {
+    private void sendUserToMainActivity(String email) {
         Intent intent = new Intent(AdminLoginActivity.this, AdminDashboard.class);
-        intent.putExtra("userName",userName);
+        intent.putExtra("Email",email);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
 

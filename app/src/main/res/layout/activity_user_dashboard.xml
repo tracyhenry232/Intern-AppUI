@@ -237,7 +237,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/name"
-        android:text="Name"
+        android:text="User"
         android:textColor="@color/colorPrimary"
         android:textSize="30dp"
         android:textAlignment="center"

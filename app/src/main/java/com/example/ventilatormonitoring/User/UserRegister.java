@@ -1,13 +1,10 @@
 package com.example.ventilatormonitoring.User;
 
-
-
-
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
-
+import android.content.SharedPreferences;
 import android.os.Bundle;
-
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
@@ -15,32 +12,24 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-
-
 import com.example.ventilatormonitoring.R;
-
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 
-import java.util.HashMap;
 import java.util.regex.Pattern;
 
 public class UserRegister extends AppCompatActivity {
 
     public static final String USERS = "User";
+    private static final String USER_NAME_KEY = "user_name"; // SharedPreferences key for user's name
 
-
-
-    EditText email, pass1, pass2, et_username , et_phone;
+    EditText email, pass1, pass2, et_username, et_phone;
     Button btn_Register;
     TextView tv_loginBtn;
 
@@ -48,7 +37,6 @@ public class UserRegister extends AppCompatActivity {
             "[a-zA-Z0-9_+&*-]+)*@" +
             "(?:[a-zA-Z0-9-]+\\.)+[a-z" +
             "A-Z]{2,7}$";
-
 
     String userId = "";
     String username = "";
@@ -61,9 +49,6 @@ public class UserRegister extends AppCompatActivity {
 
     FirebaseAuth mAuth;
     FirebaseUser mUser;
-    DatabaseReference reference;
-
-
 
 
     @Override
@@ -87,7 +72,6 @@ public class UserRegister extends AppCompatActivity {
         btn_Register = findViewById(R.id.btn_register);
         tv_loginBtn = findViewById(R.id.tv_loginButton);
 
-
         progressDialog = new ProgressDialog(this);
 
         mAuth = FirebaseAuth.getInstance();
@@ -106,10 +90,9 @@ public class UserRegister extends AppCompatActivity {
                 InputCheckFun(email, pass1, pass2);
             }
         });
-
     }
 
-    private void InputCheckFun(EditText email, EditText pass, EditText pass2) {
+    private void InputCheckFun(EditText email, EditText pass, EditText pass2 ) {
         String s_email, s_pass, s_pass2;
 
         s_email = email.getText().toString();
@@ -129,6 +112,7 @@ public class UserRegister extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
 
+                    saveUserNameToSharedPreferences(et_username.getText().toString());
 
                     mAuth.getCurrentUser().sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
@@ -148,7 +132,14 @@ public class UserRegister extends AppCompatActivity {
                 }
             }
         });
-
     }
 
+
+    private void saveUserNameToSharedPreferences(String userName) {
+        SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString(USER_NAME_KEY, userName);
+        editor.apply();
+
+    }
 }
