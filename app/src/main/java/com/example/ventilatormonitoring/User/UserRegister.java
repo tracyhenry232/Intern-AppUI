@@ -77,6 +77,8 @@ public class UserRegister extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         mUser = mAuth.getCurrentUser();
 
+
+
         tv_loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

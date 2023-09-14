@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.ventilatormonitoring.ChooseOne;
 import com.example.ventilatormonitoring.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -43,7 +44,7 @@ public class UserResetPasswordActivity extends AppCompatActivity {
                         public void onComplete(@NonNull Task<Void> task) {
                             if (task.isSuccessful()){
                                 Toast.makeText(UserResetPasswordActivity.this, "Please Check Your Email", Toast.LENGTH_SHORT).show();
-                                startActivity(new Intent(UserResetPasswordActivity.this, UserLoginActivity.class));
+                                startActivity(new Intent(UserResetPasswordActivity.this, ChooseOne.class));
                             }else{
                                 String error = task.getException().getMessage();
                                 Toast.makeText(UserResetPasswordActivity.this, error, Toast.LENGTH_SHORT).show();

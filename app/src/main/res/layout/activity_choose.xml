@@ -29,11 +29,13 @@
             android:layout_marginRight="4dp"
 
             android:text="Aerobiosys"
+            android:fontFamily="serif-monospace"
+
 
             android:textStyle="bold"
             android:textAlignment="center"
             android:textColor="@color/colorPrimary"
-            android:textSize="42sp" />
+            android:textSize="32sp" />
 
         <Button
             android:id="@+id/user"
