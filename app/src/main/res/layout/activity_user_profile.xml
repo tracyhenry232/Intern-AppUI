@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:background="@color/black"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:padding="16dp">
+
+
+        <TextView
+            android:id="@+id/textViewFirstName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UserName "
+            android:textColor="@color/colorPrimary"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:textSize="40sp"/>
+
+        <TextView
+            android:id="@+id/textViewLastName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textColor="@color/colorPrimary"
+            android:layout_below="@id/textViewFirstName"
+            android:layout_marginStart="16dp"
+            android:textSize="40sp"/>
+
+        <TextView
+            android:id="@+id/textViewEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Devices:"
+            android:textColor="@color/colorPrimary"
+            android:layout_below="@id/textViewLastName"
+            android:layout_marginStart="16dp"
+            android:textSize="30sp"/>
+    </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_showAllOrders"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profile"
+            tools:listitem="@layout/user_machines_layout" />
+</RelativeLayout>
+
