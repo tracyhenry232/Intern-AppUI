@@ -35,7 +35,7 @@ public class UserDashboard extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_dashboard);
         welcome=findViewById(R.id.welcome);
-        username=findViewById(R.id.us_username);
+        username=findViewById(R.id.et_username);
         machines=findViewById(R.id.machines);
         reports=findViewById(R.id.reports);
         profile=findViewById(R.id.profile);

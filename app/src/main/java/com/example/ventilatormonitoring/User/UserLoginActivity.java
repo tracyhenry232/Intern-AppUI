@@ -58,9 +58,9 @@ public class UserLoginActivity extends AppCompatActivity {
 
             loginEmail = findViewById(R.id.et_email);
             loginPassword = findViewById(R.id.et_password);
-            loginButton = findViewById(R.id.login_button);
-            signupRedirectText = findViewById(R.id.signUpRedirectText);
-            forgotPassword = findViewById(R.id.forgot_password);
+            loginButton = findViewById(R.id.btn_login);
+            signupRedirectText = findViewById(R.id.tv_registerButton);
+            forgotPassword = findViewById(R.id.tv_forgotPassword);
 
             auth = FirebaseAuth.getInstance();
 

@@ -51,7 +51,7 @@ public class AdminLoginActivity extends AppCompatActivity {
         setContentView(R.layout.admin_login);
 
         et_email = findViewById(R.id.et_email);
-        et_username = findViewById(R.id.ad_username);
+
         et_password = findViewById(R.id.et_password);
         btn_login = findViewById(R.id.btn_login);
         tv_registerBtn = findViewById(R.id.tv_registerButton);

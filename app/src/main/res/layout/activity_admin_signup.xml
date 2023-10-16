@@ -3,10 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/img"
+    android:background="@color/black"
     android:gravity="center"
     android:orientation="vertical"
-    >
+    tools:context=".Admin.AdminRegister">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,38 +18,34 @@
         <ImageView
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_marginTop="20dp"
-            android:alpha="0.8"
-            android:src="@drawable/logo" />
+            android:layout_marginTop="40dp"
+            android:src="@drawable/logo2" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:fontFamily="serif-monospace"
-            android:text="Aerobiosys"
+            android:layout_marginTop="40dp"
+            android:text="ADMIN REGISTRATION"
             android:textColor="@color/colorPrimary"
-            android:textSize="32sp"
-
+            android:textSize="22sp"
             android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-
             android:text="Provide your Email and Password to Signup"
             android:textColor="@color/colorPrimary"
-            android:textSize="18sp" />
+            android:textSize="16sp" />
 
         <EditText
-            android:id="@+id/ad_username"
+            android:id="@+id/et_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-
+            android:layout_marginTop="40dp"
             android:hint="Username"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
             android:textSize="16sp" />
 
         <EditText
@@ -57,21 +53,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-
             android:hint="Email"
-            android:textColor="@color/black"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
             android:textSize="16sp" />
-
 
         <EditText
             android:id="@+id/et_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-
             android:hint="Password"
-            android:inputType="textPassword"
-            android:textColor="@color/black"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
             android:textSize="16sp" />
 
         <EditText
@@ -80,31 +74,16 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:hint="Confirm Password"
-            android:inputType="textPassword"
-            android:textColor="@color/black"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
             android:textSize="16sp" />
-
-        <CheckBox
-            android:id="@+id/myCheckBox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:text="I agree to the terms and conditions" />
-
-        <CheckBox
-            android:id="@+id/myCheckBox2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:text="I consent to the use of my personal information for medical purposes" />
 
         <Button
             android:id="@+id/btn_register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="60dp"
             android:background="@drawable/bg_rounded_input_field"
-
             android:text="Register"
             android:textAllCaps="false"
             android:textColor="@color/white"
@@ -120,10 +99,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
                 android:text="Already have an Account?"
                 android:textAlignment="center"
-                android:textColor="@color/colorPrimary"
+                android:textColor="@color/white"
                 android:textSize="16sp" />
 
             <TextView
@@ -131,7 +109,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
-
                 android:text="Login"
                 android:textAlignment="center"
                 android:textColor="@color/colorPrimary"

@@ -45,7 +45,7 @@ public class AdminResetPasswordActivity extends AppCompatActivity {
                         public void onComplete(@NonNull Task<Void> task) {
                             if (task.isSuccessful()){
                                 Toast.makeText(com.example.ventilatormonitoring.Admin.AdminResetPasswordActivity.this, "Please Check Your Email", Toast.LENGTH_SHORT).show();
-                                startActivity(new Intent(com.example.ventilatormonitoring.Admin.AdminResetPasswordActivity.this, ChooseOne.class));
+                                startActivity(new Intent(com.example.ventilatormonitoring.Admin.AdminResetPasswordActivity.this, AdminLoginActivity.class));
                             }else{
                                 String error = task.getException().getMessage();
                                 Toast.makeText(com.example.ventilatormonitoring.Admin.AdminResetPasswordActivity.this, error, Toast.LENGTH_SHORT).show();

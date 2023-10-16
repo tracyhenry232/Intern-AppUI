@@ -46,7 +46,7 @@ public class AdminRegister extends AppCompatActivity {
 
         tv_loginBtn = findViewById(R.id.tv_loginButton);
 
-        et_username = findViewById(R.id.ad_username);
+        et_username = findViewById(R.id.et_username);
         email = findViewById(R.id.et_email);
         pass1 = findViewById(R.id.et_password);
         pass2 = findViewById(R.id.et_confirmPassword);

@@ -41,7 +41,7 @@ public class AdminDashboard extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_dashboard);
         welcome=findViewById(R.id.welcome);
-        username=findViewById(R.id.ad_username);
+
         machines=findViewById(R.id.machines);
         users=findViewById(R.id.users);
         profile=findViewById(R.id.profile);

@@ -65,7 +65,7 @@ public class UserRegister extends AppCompatActivity {
             }
         });
 
-        et_username = findViewById(R.id.us_username);
+        et_username = findViewById(R.id.et_username);
         email = findViewById(R.id.et_email);
         pass1 = findViewById(R.id.et_password);
         pass2 = findViewById(R.id.et_confirmPassword);

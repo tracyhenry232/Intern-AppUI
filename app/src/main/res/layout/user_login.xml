@@ -3,10 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/img"
+    android:background="@color/black"
     android:orientation="vertical"
-
-    >
+    tools:context=".User.UserLoginActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,31 +15,26 @@
         android:orientation="vertical">
 
         <ImageView
-            android:layout_width="139dp"
-            android:alpha="0.8"
-            android:layout_height="122dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_marginTop="40dp"
-            android:src="@drawable/logo" />
+            android:src="@drawable/logo2" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
-            android:text="Aerobiosys"
-            android:fontFamily="serif-monospace"
-
-            android:textColor="@color/blueButtonColor"
-            android:textSize="42sp"
+            android:text="USER LOGIN"
+            android:textColor="@color/colorPrimary"
+            android:textSize="22sp"
             android:textStyle="bold" />
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-
             android:text="Provide your Email and Password to Login"
-            android:textColor="@color/blueButtonColor"
-            android:textSize="18sp" />
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp" />
 
 
 
@@ -51,9 +45,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
             android:hint="Email"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="16sp" />
 
-            android:textColor="@color/black"
-            android:textSize="18sp" />
 
         <EditText
             android:id="@+id/et_password"
@@ -61,22 +56,22 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:hint="Password"
-            android:inputType = "textPassword"
-            android:textColor="@color/black"
-            android:textSize="18sp" />
+            android:inputType="textPassword"
+            android:textColor="@color/white"
+            android:textColorHint="#D9CCCC"
+            android:textSize="16sp" />
 
         <Button
-            android:id="@+id/login_button"
+            android:id="@+id/btn_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="100dp"
             android:background="@drawable/bg_rounded_input_field"
             android:text="Login"
-
-            android:textAllCaps="true"
+            android:textAllCaps="false"
             android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -89,21 +84,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Don't have an Account?"
-
                 android:textAlignment="center"
-                android:textColor="@color/colorPrimary"
-                android:textSize="16sp" />
+                android:textColor="@color/white"
+                android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/signUpRedirectText"
+                android:id="@+id/tv_registerButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
                 android:text="Register"
-
                 android:textAlignment="center"
                 android:textColor="@color/colorPrimary"
-                android:textSize="16sp" />
+                android:textSize="20sp" />
 
         </LinearLayout>
 
@@ -115,15 +108,14 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/forgot_password"
+                android:id="@+id/tv_forgotPassword"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="30dp"
                 android:text="Forgot your Password?"
-
-                android:textColor="@color/colorPrimary"
-                android:textSize="16sp" />
+                android:textColor="@color/white"
+                android:textSize="18sp" />
 
         </LinearLayout>
 
