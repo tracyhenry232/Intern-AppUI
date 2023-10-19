@@ -2,32 +2,23 @@ package com.example.ventilatormonitoring.Admin;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.ventilatormonitoring.R;
 
-import com.example.ventilatormonitoring.Admin.AdMachines;
-import com.example.ventilatormonitoring.Admin.AdProfile;
-import com.example.ventilatormonitoring.Admin.Users;
-import com.example.ventilatormonitoring.Admin.AdSettings;
-import com.example.ventilatormonitoring.Admin.AdminLoginActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.example.ventilatormonitoring.Admin.AdminRegister;
 
 public class AdminDashboard extends AppCompatActivity {
     CardView machines,users,profile,settings,logout;
@@ -90,13 +81,7 @@ public class AdminDashboard extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        profile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(com.example.ventilatormonitoring.Admin.AdminDashboard.this, AdProfile.class);
-                startActivity(intent);
-            }
-        });
+
 
         settings.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -48,8 +48,9 @@
                         android:layout_marginTop="8dp"
 
                         android:text="AP-123"
+
                         android:textAlignment="center"
-                        android:textColor="@color/black"
+                        android:textColor="@color/colorPrimary"
                         android:textSize="24sp"
                         android:textStyle="bold" />
 
@@ -74,6 +75,7 @@
                     android:layout_marginLeft="16dp"
                     android:layout_marginTop="8dp"
                     android:text="Last Connected:21/03/2023"
+                    android:textStyle="bold"
                     android:textColor="@color/black"
                     android:textSize="20sp" />
 
